@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+
+set -eu
 
 # PRINTS
 # ​░░░░░░░░▄░░░░░░░░░░░
@@ -14,25 +16,26 @@
 
 
 #VARS
-R="\e[31m" #RED
-G="\e[32m" #GREEN
-C="\e[36m" #CYAN
-M="\e[35m" #MAGENTA
-K="\e[30m" #BLACK
-W="\e[97m"
-NOCOLOR="\e[39m"
-BLACKBG="\e[40m"
-WB="\e[107m"
-DB="\e[49m"
-BB="\e[100m"
+R="\033[31m" #RED
+G="\033[32m" #GREEN
+C="\033[36m" #CYAN
+M="\033[35m" #MAGENTA
+K="\033[30m" #BLACK
+W="\033[97m"
+NOCOLOR="\033[39m"
+BLACKBG="\033[40m"
+WB="\033[107m"
+DB="\033[49m"
+BB="\033[100m"
 
-echo -e "${C}​░░░░░░░░${R}▄${C}░░░░░░░░░░░"
-echo -e "░░░░░░░${R}▀▄▀${K}${BB}▄${DB}${C}░░░░░░░░░"
-echo -e "░░░░${W}▄${WB}▀▀${DB}▄▄▄${K}${BB}█${DB}${W}▄▄${WB}▀▀${DB}▄${C}░░░░"
-echo -e "░░░░${W}${WB}█          █${DB}${C}░░░░"
-echo -e "░░░░${W}${WB}█          █${DB}${C}░░░░"
-echo -e "░░░${M}▄${W}█${WB}${R}░${NOCOLOR}${K}▀█▄  ▄█▀${R}░${W}${DB}█${M}▄${C}░░░"
-echo -e "░░${M}█▒█${NOCOLOR}${WB}    ${M}▒▒${W}    ${DB}${M}█▒█${C}░░"
-echo -e "░░${M}█▒${WB}${K}▄▀        ▀▄${DB}${M}▒█${C}░░"
-echo -e "░░░${W}${WB}█            █${DB}${C}░░░"
-echo -e "░░░${W}▀${WB}${K}▄█        █▄${W}${DB}▀${C}░░░${NOCOLOR}"
+printf "${C}​░░░░░░░░${R}▄${C}░░░░░░░░░░░\n"
+printf "░░░░░░░${R}▀▄▀${K}${BB}▄${DB}${C}░░░░░░░░░\n"
+printf "░░░░${W}▄${WB}▀▀${DB}▄▄▄${K}${BB}█${DB}${W}▄▄${WB}▀▀${DB}▄${C}░░░░\n"
+printf "░░░░${W}${WB}█          █${DB}${C}░░░░\n"
+printf "░░░░${W}${WB}█          █${DB}${C}░░░░\n"
+printf "░░░${M}▄${W}█${WB}${R}░${NOCOLOR}${K}▀█▄  ▄█▀${R}░${W}${DB}█${M}▄${C}░░░\n"
+printf "░░${M}█▒█${NOCOLOR}${WB}    ${M}▒▒${W}    ${DB}${M}█▒█${C}░░\n"
+printf "░░${M}█▒${WB}${K}▄▀        ▀▄${DB}${M}▒█${C}░░\n"
+printf "░░░${W}${WB}█            █${DB}${C}░░░\n"
+printf "░░░${W}▀${WB}${K}▄█        █▄${W}${DB}▀${C}░░░${NOCOLOR}\n"
+
